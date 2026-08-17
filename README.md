@@ -1,4 +1,4 @@
-![AI-ERP — Automation, AI Agents and RAG with n8n](docs/assets/ai-erp-hero.svg)
+![AI-ERP — Automation, AI Agents and RAG with n8n](./ai-erp-hero.svg)
 
 [![n8n](https://img.shields.io/badge/Automation-n8n_Cloud-EA4B71?style=flat-square&logo=n8n&logoColor=white)](https://n8n.io)
 [![AI Agent](https://img.shields.io/badge/Pattern-AI_Agent-6657E8?style=flat-square)](#the-ai-side)
@@ -20,7 +20,7 @@ A working mini-ERP for a fictional Israeli cosmetics & skincare business, automa
 
 Airtable is the database (8 tables) and the UI. Documents are rendered to PDF and **stored in Google Drive** — never in the database. Chat and embeddings run on separate OpenAI-compatible endpoints set in n8n credentials, so both are swappable; the embeddings model is multilingual so Hebrew works. n8n Cloud supplies the public HTTPS URL, so the Telegram bots need no tunnel.
 
-![AI-ERP workflow architecture: Telegram, Gmail and schedule triggers feed n8n Cloud agents and RAG, which write out to Airtable, Gmail, Google Drive and Telegram](docs/assets/architecture-flow.svg)
+![AI-ERP workflow architecture: Telegram, Gmail and schedule triggers feed n8n Cloud agents and RAG, which write out to Airtable, Gmail, Google Drive and Telegram](./architecture-flow.svg)
 
 <details>
 <summary>Plain-text version of the diagram</summary>
@@ -81,8 +81,7 @@ Vector store and chat memory are in-memory (wiped on restart). No filesystem on 
 
 Airtable הוא בסיס הנתונים (8 טבלאות) וגם הממשק. מסמכים מרונדרים ל-PDF ו**נשמרים ב-Google Drive** — לא בבסיס הנתונים. השיחה והאמבדינגס רצים על נקודות קצה נפרדות תואמות OpenAI שמוגדרות בקרדנצ׳יאלס של n8n, ולכן ניתנות להחלפה; מודל האמבדינגס רב-לשוני כדי שעברית תעבוד. n8n Cloud מספק כתובת HTTPS ציבורית, ולכן הבוטים בטלגרם לא צריכים מנהרה.
 
-![תרשים ארכיטקטורת AI-ERP](docs/assets/architecture-flow.svg)
-
+![תרשים ארכיטקטורת AI-ERP](./architecture-flow.svg)
 <details>
 <summary>גרסת טקסט פשוט של התרשים</summary>
 
