@@ -1,0 +1,116 @@
+<svg viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI-ERP architecture: inputs into n8n Cloud agents and RAG, out to Airtable, Gmail, Drive and Telegram">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14171C"/>
+      <stop offset="100%" stop-color="#1B1F26"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A2018"/>
+      <stop offset="100%" stop-color="#221C22"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C98B6B"/>
+    </marker>
+    <pattern id="grid2" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#242A33" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="560" fill="url(#bg2)"/>
+  <rect width="1200" height="560" fill="url(#grid2)" opacity="0.3"/>
+
+  <text x="600" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#EDEAE4">Workflow Architecture</text>
+  <text x="600" y="78" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#8B93A0">ארכיטקטורת המערכת — מהקלט ועד הפלט דרך n8n Cloud</text>
+
+  <!-- INPUT NODES -->
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <!-- node template repeated -->
+    <g>
+      <rect x="60" y="130" width="230" height="56" rx="10" fill="#1E232B" stroke="#3A414D"/>
+      <circle cx="86" cy="158" r="4" fill="#7FA98A"/>
+      <text x="102" y="153" font-size="15" fill="#EDEAE4">Telegram</text>
+      <text x="102" y="171" font-size="12" fill="#9AA1AC">manager chat</text>
+    </g>
+    <g>
+      <rect x="60" y="204" width="230" height="56" rx="10" fill="#1E232B" stroke="#3A414D"/>
+      <circle cx="86" cy="232" r="4" fill="#7FA98A"/>
+      <text x="102" y="227" font-size="15" fill="#EDEAE4">Telegram</text>
+      <text x="102" y="245" font-size="12" fill="#9AA1AC">support chat</text>
+    </g>
+    <g>
+      <rect x="60" y="278" width="230" height="56" rx="10" fill="#1E232B" stroke="#3A414D"/>
+      <circle cx="86" cy="306" r="4" fill="#7FA98A"/>
+      <text x="102" y="301" font-size="15" fill="#EDEAE4">Gmail inbox</text>
+      <text x="102" y="319" font-size="12" fill="#9AA1AC">sales replies</text>
+    </g>
+    <g>
+      <rect x="60" y="352" width="230" height="56" rx="10" fill="#1E232B" stroke="#3A414D"/>
+      <circle cx="86" cy="380" r="4" fill="#7FA98A"/>
+      <text x="102" y="375" font-size="15" fill="#EDEAE4">Schedules</text>
+      <text x="102" y="393" font-size="12" fill="#9AA1AC">polling &amp; cron</text>
+    </g>
+  </g>
+
+  <!-- CORE NODE -->
+  <g>
+    <rect x="430" y="180" width="340" height="200" rx="16" fill="url(#core)" stroke="#C98B6B" stroke-width="1.6"/>
+    <text x="600" y="222" text-anchor="middle" font-family="Georgia, serif" font-size="21" fill="#EDEAE4">n8n Cloud</text>
+    <text x="600" y="244" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#C98B6B">Agents · Tool Calling · RAG</text>
+    <line x1="460" y1="260" x2="740" y2="260" stroke="#3A414D"/>
+    <text x="600" y="286" text-anchor="middle" font-family="'Courier New', monospace" font-size="12.5" fill="#B7BEC8">Manager Agent · Support Agent</text>
+    <text x="600" y="308" text-anchor="middle" font-family="'Courier New', monospace" font-size="12.5" fill="#B7BEC8">Sales Agent · Document Pipeline</text>
+    <text x="600" y="330" text-anchor="middle" font-family="'Courier New', monospace" font-size="12.5" fill="#B7BEC8">Vector Store (policies + catalog)</text>
+    <text x="600" y="360" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#7FA98A">owner-checked · multilingual (HE/EN)</text>
+  </g>
+
+  <!-- OUTPUT NODES -->
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <g>
+      <rect x="910" y="130" width="230" height="56" rx="10" fill="#1E232B" stroke="#3A414D"/>
+      <circle cx="936" cy="158" r="4" fill="#E9C7B8"/>
+      <text x="952" y="153" font-size="15" fill="#EDEAE4">Airtable</text>
+      <text x="952" y="171" font-size="12" fill="#9AA1AC">8 tables · data + UI</text>
+    </g>
+    <g>
+      <rect x="910" y="204" width="230" height="56" rx="10" fill="#1E232B" stroke="#3A414D"/>
+      <circle cx="936" cy="232" r="4" fill="#E9C7B8"/>
+      <text x="952" y="227" font-size="15" fill="#EDEAE4">Gmail</text>
+      <text x="952" y="245" font-size="12" fill="#9AA1AC">sales email out</text>
+    </g>
+    <g>
+      <rect x="910" y="278" width="230" height="56" rx="10" fill="#1E232B" stroke="#3A414D"/>
+      <circle cx="936" cy="306" r="4" fill="#E9C7B8"/>
+      <text x="952" y="301" font-size="15" fill="#EDEAE4">Google Drive</text>
+      <text x="952" y="319" font-size="12" fill="#9AA1AC">rendered PDFs</text>
+    </g>
+    <g>
+      <rect x="910" y="352" width="230" height="56" rx="10" fill="#1E232B" stroke="#3A414D"/>
+      <circle cx="936" cy="380" r="4" fill="#E9C7B8"/>
+      <text x="952" y="375" font-size="15" fill="#EDEAE4">Telegram</text>
+      <text x="952" y="393" font-size="12" fill="#9AA1AC">replies to user</text>
+    </g>
+  </g>
+
+  <!-- CONNECTORS: inputs -> core -->
+  <path d="M290,158 L430,240" fill="none" stroke="#4A525E" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <path d="M290,232 L430,255" fill="none" stroke="#4A525E" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <path d="M290,306 L430,300" fill="none" stroke="#4A525E" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <path d="M290,380 L430,320" fill="none" stroke="#4A525E" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- CONNECTORS: core -> outputs -->
+  <path d="M770,240 L910,158" fill="none" stroke="#4A525E" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <path d="M770,255 L910,232" fill="none" stroke="#4A525E" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <path d="M770,300 L910,306" fill="none" stroke="#4A525E" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <path d="M770,320 L910,380" fill="none" stroke="#4A525E" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- legend -->
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#8B93A0">
+    <circle cx="70" cy="470" r="4" fill="#7FA98A"/>
+    <text x="82" y="474">input trigger</text>
+    <circle cx="200" cy="470" r="4" fill="#C98B6B"/>
+    <text x="212" y="474">n8n Cloud core</text>
+    <circle cx="340" cy="470" r="4" fill="#E9C7B8"/>
+    <text x="352" y="474">output / destination</text>
+  </g>
+  <text x="1140" y="474" text-anchor="end" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#5C636E">no servers · no Docker · n8n Cloud + Airtable only</text>
+</svg>
